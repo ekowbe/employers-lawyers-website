@@ -1,0 +1,195 @@
+div.container > a > h3 {
+  color: black;
+}
+
+
+.blue-link:hover {
+  color: #106BBD !important;
+}
+
+.blue-link-underline {
+  color: #106BBD !important;
+}
+
+.blue-link-underline:hover {
+  text-underline-position: below;
+}
+
+
+/* Footer */
+footer {
+  /* background-repeat: no-repeat; */
+  /* background-image: url("../img/footer/pillar.png"); */
+  /* background-color: #01426e; */
+  /* background-blend-mode:color; */
+  background-size: cover;
+  background-position: center;
+  color: #FFFFFF;
+  padding: 40px;
+}
+
+
+/* Responsive styles for the footer */
+@media (max-width: 768px) {
+  footer {
+    padding: 20px;
+  }
+
+
+
+}
+
+/* #homepage_carousel {
+  position: relative;
+  z-index: 1;
+} */
+
+/* Carousel styling */
+#introCarousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item.active {
+  height: 100vh;
+  position: relative !important;
+}
+
+.carousel-item:nth-child(1) {
+  background-image: url('../img/carousel/bridge.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.carousel-item:nth-child(2) {
+  background-image: url('../img/carousel/green.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+
+
+/* Title */
+.banner-title {
+  font-family: "Cormorant Garamond Medium", "Times New Roman", Times, serif;
+  font-size: 8rem;
+}
+
+.work-title {
+  font-family: "Cormorant Garamond Medium", "Times New Roman", Times, serif;
+  font-size: 5rem;
+  color: black;
+}
+
+.cormorant {
+  font-family: "Cormorant Garamond Medium", "Times New Roman", Times, serif;
+}
+
+
+.p-text{
+  font-size: x-large;
+  color: black;
+  line-height: normal;
+}
+
+.main-nav {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/* Menu */
+
+#menu-content {
+  position: absolute;
+  width: 100%;
+  top: 0.1;
+  left: 0;
+  z-index: 2;
+}
+
+.translucent-nav {
+  /* background-color: transparent; */
+  fill-opacity: 80%;
+  /* backdrop-filter: blur(5px); */
+}
+
+
+.navbar-custom.scrolled {
+  background-color: rgba(119, 144, 113, .9) !important;
+  transition: background-color 100ms linear;
+}
+
+
+
+
+
+.bg-carousel {
+  top: 0;
+  margin-top: -125px;
+}
+
+.header-logo {
+  width: 160px;
+  margin: 0;
+  padding: 0;
+}
+
+.search-icon {
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-icon {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  margin-left: 200px;
+}
+
+#nav-right-item {
+  width: 15px;
+  height: 15px;
+
+  padding: 0;
+  margin-right: 200px;
+}
+
+/* Extra small devices (phones) */
+@media screen and (max-width: 576px) {
+  .banner-title {
+    font-size: 3rem;
+  }
+}
+
+/* Small devices (tablets) */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .banner-title {
+    font-size: 4rem;
+  }
+}
+
+/* Medium devices (desktops) */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .banner-title {
+    font-size: 6rem;
+  }
+}
+
+/* Large devices (large desktops) */
+@media screen and (min-width: 993px) {
+  .banner-title {
+    font-size: 8rem;
+  }
+}

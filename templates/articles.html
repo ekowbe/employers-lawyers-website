@@ -1,0 +1,35 @@
+{% extends '_base.html' %}
+
+{% block content %}
+<div class="bg-light">
+<div class="container mb-5">
+    <h3 class="fw-light pt-5 mb-5 text-dark">Eye on the Law</h3>
+    <h1 class="work-title mb-5">Articles</h1>
+
+    {% for article in articles.values() %}
+    
+    <a href="/articles/{{article.title}}">
+        <h3 class="lead blue-link fs-2 pt-3 mb-3">{{article.title}}</h3>
+    </a>
+    {% endfor %}
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</div>
+
+
+
+
+{% endblock %}

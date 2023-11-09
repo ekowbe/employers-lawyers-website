@@ -1,0 +1,133 @@
+{% if person: %}
+<div class="accordion accordion-flush details_accordion" id="details_accordion">
+    {% if person['experience'] %}
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                <h4 class="cormorant">Areas of Experience </h3>
+            </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#details_accordion">
+            <div class="accordion-body fw-light">
+                <ul class="fw-light">
+                    {% for area in person['experience'] %}
+                    <li>{{ area }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% if person['education'] %}
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                <h4 class="cormorant">Education </h3>
+            </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+            data-bs-parent="#details_accordion">
+            <div class="accordion-body fw-light">
+                <ul class="fw-light">
+                    {% for sch in person['education'] %}
+                    <li>{{ sch }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% if person['admissions'] %}
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                <h4 class="cormorant">Admissions </h3>
+            </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+            data-bs-parent="#details_accordion">
+            <div class="accordion-body">
+                <h4 class="cormorant">Bars</h4>
+                    <ul class="fw-light">
+                        {% for plc in person['admissions']['bars'] %}
+                        <li>{{ plc }}</li>
+                        {% endfor %}
+                    </ul>
+
+                <h4 class="cormorant">Courts</h4>
+                <ul class="fw-light">
+                    {% for plc in person['admissions']['courts'] %}
+                    <li>{{ plc }}</li>
+                    {% endfor %}
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% if person['affiliations'] %}
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                <h4 class="cormorant">Affiliations </h3>
+            </button>
+        </h2>
+        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+            data-bs-parent="#details_accordion">
+            <div class="accordion-body">
+                <ul class="fw-light">
+                    {% for affiliation in person['affiliations'] %}
+                    <li>{{ affiliation }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% if person['awards'] %}
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                <h4 class="cormorant">Honors and Distinctions </h3>
+            </button>
+        </h2>
+        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+            data-bs-parent="#details_accordion">
+            <div class="accordion-body">
+                <ul class="fw-light">
+                    {% for award in person['awards'] %}
+                    <li>{{ award }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% if person['boards'] %}
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingSix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                <h4 class="cormorant">Boards</h3>
+            </button>
+        </h2>
+        <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix"
+            data-bs-parent="#details_accordion">
+            <div class="accordion-body">
+                <ul class="fw-light">
+                    {% for board in person['boards'] %}
+                    <li>{{ board }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endif %}

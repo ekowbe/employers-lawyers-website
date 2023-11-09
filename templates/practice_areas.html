@@ -1,0 +1,27 @@
+{% extends '_base.html' %}
+
+{% block content %}
+<br><br><br>
+<div class="container">
+    <h1 class="work-title mb-2">Work We Do</h1>
+    
+    <div>
+        {% for practice_area in practice_areas %}
+        
+            <a href="{{ practice_area.url }}" class="text-black blue-link">
+                <h3 class="fw-light pt-5 mb-2">
+                    {{ practice_area.title }} 
+                </h3>
+                <p class="lead">
+                    {{ practice_area.blurb }}
+                </p>
+            </a>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+<br><br><br><br><br><br>
+
+{% endblock %}

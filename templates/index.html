@@ -1,0 +1,80 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+<!-- Carousel wrapper -->
+<div id="homepage_carousel" class="bg-carousel carousel slide carousel-fade shadow-2-strong" data-mdb-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-mdb-target="#homepage_carousel" data-mdb-slide-to="0" class="active"></li>
+    <li data-mdb-target="#homepage_carousel" data-mdb-slide-to="1"></li>
+  </ol>
+
+  <!-- Inner -->
+  <div class="carousel-inner">
+
+    <!-- Single item -->
+    <div class="carousel-item active">
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white text-center">
+            <h1 class="banner-title mb-3">Workplace Solutions <br>for Employers</h1>
+            <a class="btn btn-outline-light btn-lg m-2" role="button" id="scrollToAbout">About Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Single item -->
+    <div class="carousel-item">
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white text-center">
+            <h1 class="banner-title mb-3">Work We Do</h1>
+            <a class="btn btn-outline-light btn-lg m-2" href="/practice_areas" target="_blank" role="button">See more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- End Inner -->
+
+  <!-- Controls -->
+  <a class="carousel-control-prev" href="#homepage_carousel" role="button" data-mdb-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#homepage_carousel" role="button" data-mdb-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!-- End Carousel wrapper -->
+
+<!-- About section -->
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h3 class="fw-light pt-5 text-dark">About Us</h3>
+        <p class="lead">In the spirit of their grandfather State Supreme Court Justice Elmer Ryan, Dave and Bill
+          founded the firm with the mission to provide the finest quality legal service in accordance with the highest
+          ethical standards. The Firm’s mission has led to countless achievements, and positive results for clients as
+          well as other law firms who use the Firm as local counsel in employment litigation matters.
+          <br><br>
+          Each of our attorneys and paralegals is highly knowledgeable and experienced in the area of labor and 
+          employment law. Our focus enables us to provide the highest quality of legal service available to employers 
+          while offering a streamlined approach, tailored to meet the specific needs of each client, in order to avoid 
+          unnecessary legal fees.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="{{url_for('static', filename='img/people/DaveandBill.webp')}}" alt="placeholder image"
+          class="img-fluid shadow-lg">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End About section -->
+{% endblock %}

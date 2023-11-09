@@ -1,0 +1,65 @@
+{% extends '_base.html' %}
+
+{% block content %}
+<div class="bg-light bg-gradient">
+    <div class="container">
+        <h3 class="fw-light pt-5 text-dark">People</h3>
+        <div class="row align-items-center">
+            <div class="col-1">
+
+            </div>
+            <div class="col-lg-7 col-md-12 mr-lg-5">
+                <img src="{{person.img_src}}" alt="">
+            </div>
+            <div class="col-lg-4 col-md-12 mt-lg-0 mt-3">
+                <h1 id="name" class="cormorant mb-4">{{person.name}}</h1>
+                <h5 id="title" class="mb-2 fw-light text-muted">{{person.title}}</h5>
+                <h5 id="tel" class="mb-2 fw-light text-muted">T: {{person.tel}}</h5>
+                <h5 id="email" class="mb-2 fw-light text-muted">
+                    <a class="text-muted blue-link" href="mailto:{{person.email}}">{{person.email}}</a>
+                </h5>
+                <h5 class="mb-2 fw-light blue-link text-muted">
+                    <a id="vcard-link" class="text-muted blue-link" href="#" data-name="{{person.name}}" data-title="{{person.title}}" data-tel="{{person.tel}}" data-email="{{person.email}}">vCard</a>
+                </h5>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="bg-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-1">
+
+            </div>
+            <div class="col-lg-7 col-md-12 mt-5">
+                <p class="lead text-justify">
+                    {{person.descrip | safe}}
+                </p>
+            </div>
+            <div class="col-lg-3 col-md-12 mt-5 offset-lg-1 px-1">
+                {% include 'details_accordion.html' %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<style>
+@media (max-width: 991.98px) {
+  .align-items-center {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .bg-white {
+    margin-top: 2rem;
+  }
+}
+</style>
+{% endblock %}
