@@ -1,0 +1,6 @@
+# Ignore the .git folder
+.git/
+
+# Ignore other files or folders you don't want to include
+node_modules/
+build/
