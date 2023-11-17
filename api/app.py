@@ -7,8 +7,8 @@ from time import strftime
 from flask import Flask, request, make_response, redirect, url_for
 from flask import render_template
 from datetime import datetime
-from models.people import people as peeps
-from models.articles import reads
+from api.models.people import people as peeps
+from api.models.articles import reads
 
 cloudinary.config(
   cloud_name = "dmusx7j1c",
